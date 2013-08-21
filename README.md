@@ -8,15 +8,19 @@ codeigniter facebook library
 4. Create controller called as "facebook_login.php".
 
 5. Load library : 
+
+		 //CONSTRUCTOR 
                   public function __construct(){
               		parent::__construct();
               	  	$this->load->library('facebook/fb','fb');
                   }
 
 6.Create Links And Get Profile Data:
+
+		// INDEX
                 public function index(){
-                  $data['login_url'] = $this->fb->createLoginLink();
-  		            $data['user_profile'] = $this->fb->initialize();
+                  	$data['login_url'] = $this->fb->createLoginLink();
+  		        $data['user_profile'] = $this->fb->initialize();
                 }
                 
                 
