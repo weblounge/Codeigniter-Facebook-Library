@@ -4,6 +4,7 @@ class fb{
 
 	public function __construct()
 	{
+		// CC
 		$this->CI = get_instance();
 		$this->CI->config->load("facebook",TRUE);
 		$config = $this->CI->config->item('facebook');
