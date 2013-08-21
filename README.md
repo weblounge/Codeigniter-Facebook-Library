@@ -6,18 +6,24 @@ codeigniter facebook library
 2. Copy and paste facebook.php page from config folder.
 3. Set AppId and Secret in facebook.php page from config folder.
 4. Create controller called as "facebook_login.php".
+
 5. Load library : 
                   public function __construct(){
               		parent::__construct();
               	  	$this->load->library('facebook/fb','fb');
                   }
+
 6.Create Links And Get Profile Data:
                 public function index(){
                   $data['login_url'] = $this->fb->createLoginLink();
   		            $data['user_profile'] = $this->fb->initialize();
                 }
+                
+                
 7.Create view called as facebook_login.php
+
 8.Copy and paste below code. 
+
                   
                 // CREATE LINK
                 <a href="#" onclick="popup('<?php echo $login_url; ?>')" title="Login with Facebook"><img src="<?=IMAGES?>log_with_fb.png" /></a>
