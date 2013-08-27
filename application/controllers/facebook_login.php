@@ -19,7 +19,7 @@ class facebook_login extends CI_Controller
 	function facebook_logout()
 	{
 		$this->fb->facebookLogout();
-		redirect('upload');
+		redirect('facebook_login');
 	}
 }
 ?>
